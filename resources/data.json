@@ -1,0 +1,244 @@
+{
+  "theme": {
+    "--bg": "#f3ecdf",
+    "--bg-accent": "#f8f4eb",
+    "--ink": "#1f2a2c",
+    "--muted": "#526062",
+    "--line": "rgba(31, 42, 44, 0.12)",
+    "--card": "rgba(255, 250, 242, 0.72)",
+    "--card-strong": "#fffaf2",
+    "--highlight": "#d86f45",
+    "--highlight-dark": "#b95631",
+    "--shadow": "0 24px 70px rgba(77, 54, 34, 0.12)",
+    "--radius-lg": "32px",
+    "--radius-md": "22px",
+    "--radius-sm": "14px",
+    "--max-width": "1120px"
+  },
+  "hero": {
+    "eyebrow": "QUALITY ASSURANCE SPECIALIST / AUTOMATION EXPERT / PROBLEM SOLVER",
+    "headline": "I build robust automation frameworks and ensure flawless digital experiences through meticulous testing and clear debugging.",
+    "text": "This portfolio showcases my professional QA experience, industry-grade automation projects built from scratch, and my ability to coordinate complex releases in a global Agile environment. With a strong foundation in test strategy, scripting, and cross-functional collaboration, I am passionate about elevating software quality and delivering seamless user experiences. Explore my projects to see how I combine technical expertise with a commitment to excellence in every aspect of quality assurance.",
+    "focusLabel": "Currently focused on",
+    "focusList": [
+      "Upskilling in Docker, Kubernetes, and Jenkins",
+      "Mastering API testing, REST, and Cucumber",
+      "Developing scalable data-driven automation frameworks"
+    ],
+    "metrics": [
+      {
+        "value": "3+",
+        "label": "featured builds"
+      },
+      {
+        "value": "100%",
+        "label": "static-site compatible"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "headline": "Results-driven Quality Assurance with a focus on automation.",
+    "paragraphs": [
+      "I am a results-driven Quality Assurance Specialist with expertise across the full Software Testing Lifecycle, from strategic planning to meticulous debugging. I am highly proficient in integration, system, and cross-platform compatibility testing, utilizing tools like JIRA for effective defect tracking.",
+      "Armed with a recent Fellowship in QA Automation from Crio.Do, I have built multiple industry-grade projects from scratch. Whether I am developing Python scripts to reduce manual effort by 15% or configuring complex CI/CD pipelines, I enjoy solving problems and driving efficiency across global teams."
+    ],
+    "coreStrengthsTitle": "Core strengths",
+    "coreStrengths": [
+      "Java",
+      "Selenium",
+      "TestNG",
+      "Python",
+      "API Testing (Postman/RestAssured)",
+      "JIRA",
+      "CI/CD"
+    ]
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "headline": "Selected automation projects demonstrating real-world testing, framework design, and problem-solving.",
+    "featured": [
+      {
+        "index": "01",
+        "title": "QKart E-Commerce Automation Framework",
+        "description": "Built a scalable Data-Driven framework for an e-commerce platform using Java, Selenium, and TestNG to validate critical flows like Search and Checkout. Engineered robust locators using XPath to handle dynamic elements and utilized Apache POI for running tests against multiple datasets.",
+        "tags": [
+          "Java",
+          "Selenium",
+          "TestNG"
+        ],
+        "links": [
+          { "type": "link", "text": "Live Site", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "02",
+        "title": "QTrip API Testing Project",
+        "description": "Executed manual End-to-End API testing for a travel website using Postman, and automated the API tests using the Rest Assured Framework and Java. Integrated the API tests seamlessly alongside UI Tests and utilized an XML file to selectively run tests via TestNG.",
+        "tags": [
+          "API Testing (Postman/RestAssured)",
+          "Java",
+          "TestNG"
+        ],
+        "links": [
+          { "type": "link", "text": "Case Study", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "03",
+        "title": "Web Automation on Stack Overflow",
+        "description": "Automated web application testing using Java and Selenium to verify the functionality of the Stack Overflow website. Handled real-world automation challenges such as captchas and synchronization, managed code repositories with Git, and executed tests using Gradle.",
+        "tags": [
+          "Java",
+          "Selenium",
+          "Gradle",
+          "Git",
+          "Synchronization"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Notes", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      }
+    ],
+    "more": [
+      {
+        "index": "04",
+        "title": "QTrip QA (UI Testing)",
+        "description": "Designed and automated UI test cases for a travel website following the Page Object Model design pattern using Page Factory, Selenium, and TestNG. Implemented a Singleton pattern for WebDriver initialization, utilized Apache POI for accepting dynamic test data, and generated customized test reports using Extent Reports.",
+        "tags": [
+          "Java",
+          "Selenium",
+          "TestNG",
+          "Page Object Model",
+          "Extent Reports"
+        ],
+        "links": [
+          { "type": "link", "text": "Live Site", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://vimeo.com/1182443305?fl=tl&fe=ec" }
+        ]
+      },
+      {
+        "index": "05",
+        "title": "Video Sharing Platform Automation (XFlix)",
+        "description": "Automated tests on the XFlix platform using Java and Selenium to verify URLs, retrieve details of uploaded videos, validate video upload functionality, and check data persistence.",
+        "tags": [
+          "Java",
+          "Selenium",
+          "Xpath"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Notes", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "06",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Experience and Academics",
+    "headline": "A timeline of my professional experience, education, and milestones.",
+    "featured": [
+      {
+        "year": "Now",
+        "title": "Open to collaborations and new opportunities",
+        "date": "",
+        "description": "I am available for immediate joining and am open to office, hybrid, or remote work models, including opportunities to collaborate with global tech teams."
+      },
+      {
+        "year": "2026",
+        "title": "Fellowship in QA Automation | Crio.Do",
+        "date": "March 2026",
+        "description": "Mastered automation technologies by building real-world projects from scratch. The curriculum heavily focused on Java, Selenium WebDriver, TestNG, Git, HTML, and Linux."
+      },
+      {
+        "year": "2025",
+        "title": "Quality Services Associate | Amazon Development Centre",
+        "date": "March 2022 - September 2025",
+        "description": "Executed system and integration testing for Fire OS and Vega OS. Driven by efficiency, I developed Python scripts that reduced manual testing effort by 15% and successfully logged and tracked 300+ defects in JIRA."
+      },
+      {
+        "year": "2012",
+        "title": "BSc Physics | Mahatma Gandhi University",
+        "date": "January 2009 — January 2012",
+        "description": "Executed system and integration testing for Fire OS and Vega OS. Driven by efficiency, I developed Python scripts that reduced manual testing effort by 15% and successfully logged and tracked 300+ defects in JIRA."
+      }
+    ],
+    "more": [
+      {
+        "year": "2024",
+        "title": "Testing and Operations Experience | Freelance / Personal Projects",
+        "date": "2023 - 2024",
+        "description": "Worked on smaller hands-on software projects, strengthened debugging habits, and built more confidence with workflows across development and QA."
+      },
+      {
+        "year": "2023",
+        "title": "Frontend Learning and Practice",
+        "date": "2022 - 2023",
+        "description": "Focused on improving HTML, CSS, JavaScript, and interface implementation through self-directed portfolio and practice work."
+      },
+      {
+        "year": "2022",
+        "title": "Foundation Building",
+        "date": "Early milestones",
+        "description": "Built the base for long-term technical growth by learning software fundamentals and exploring personal project development."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "headline": "Ready to build a bug-free experience together?",
+    "paragraphs": [
+      "Reach out to me via email or connect with me on LinkedIn to discuss QA automation, testing strategies, or potential roles.",
+      "I am always excited to collaborate on projects, share insights, and explore new opportunities in the world of quality assurance.",
+      "Let's connect and create seamless digital experiences together!"
+    ],
+    "links": [
+      {
+        "url": "mailto:gokulesh.sreekumar@gmail.com",
+        "icon": "images/gmail.png",
+        "alt": "Email",
+        "text": "gokulesh.sreekumar@gmail.com",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "url": "https://github.com/gosme",
+        "icon": "images/github.png",
+        "alt": "GitHub",
+        "text": "GitHub",
+        "target": "_blank",
+        "rel": "noreferrer"
+      },
+      {
+        "url": "https://www.linkedin.com/in/gokulesh/",
+        "icon": "images/linkedin.png",
+        "alt": "LinkedIn",
+        "text": "LinkedIn",
+        "target": "_blank",
+        "rel": "noreferrer"
+      }
+    ]
+  }
+}
