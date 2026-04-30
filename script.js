@@ -152,7 +152,18 @@ async function loadContent() {
   try {
     const contribResponse = await fetch('resources/contributions.json');
     const contribData = await contribResponse.json();
-    renderContributions(contribData);
+    
+    let gitlabData = {};
+    try {
+      const gitlabResponse = await fetch('resources/gitlab-contributions.json');
+      if (gitlabResponse.ok) {
+        gitlabData = await gitlabResponse.json();
+      }
+    } catch (e) {
+      // Silently ignore if gitlab data isn't present
+    }
+
+    renderContributions(contribData, gitlabData);
   } catch (error) {
     console.error("Failed to load contributions:", error);
     // Render empty graph if fetch fails
@@ -160,7 +171,7 @@ async function loadContent() {
   }
 }
 
-function renderContributions(data) {
+function renderContributions(data, gitlabData = {}) {
   const graphContainer = document.getElementById('contribution-graph');
   if (!graphContainer) return;
   
@@ -173,6 +184,14 @@ function renderContributions(data) {
     data.contributions.forEach(item => {
       contribMap.set(item.date, item.count);
     });
+  }
+
+  // Merge GitLab contributions
+  if (gitlabData) {
+    for (const [date, count] of Object.entries(gitlabData)) {
+      const existing = contribMap.get(date) || 0;
+      contribMap.set(date, existing + count);
+    }
   }
 
   // Generate 365 days (52 weeks * 7 days + 1)

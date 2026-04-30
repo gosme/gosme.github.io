@@ -19,11 +19,26 @@ git clone https://github.com/gosme/gosme.github.io.git
 You don't need to touch the HTML! All the text on the website is powered by a single file.
 1. Open `resources/data.json` in any text editor.
 2. Replace the placeholder text, projects, timeline items, and links with your own information.
-3. Update the images in the `images/` directory. Make sure to keep the filenames the same, or update the references in `data.json` and `index.html` accordingly.
-4. If you want background music, replace `resources/music.mp3` with your own audio file.
-5. If you want to change the theme, update the `theme` object in `resources/data.json`.
+3. Add project videos using standard YouTube or Vimeo URLs (e.g., `https://www.youtube.com/watch?v=...`). The template automatically handles the embed conversions!
+4. Update the images in the `images/` directory. Make sure to keep the filenames the same, or update the references in `data.json` and `index.html` accordingly.
+5. If you want background music, replace `resources/music.mp3` with your own audio file.
+6. If you want to change the theme, update the `theme` object in `resources/data.json`.
 
-### 3. Test Locally
+### 3. Setup Your Contribution Graph
+This template displays a "Code Activity" graph similar to a GitHub profile.
+
+**GitHub Activity (Automated):**
+This template includes a GitHub Action (`.github/workflows/update-contributions.yml`) that automatically pulls your GitHub contributions every night. For it to work:
+1. Go to your repository settings on GitHub.
+2. Navigate to **Actions > General**.
+3. Under **Workflow permissions**, ensure **"Read and write permissions"** is selected and hit save.
+
+**GitLab Activity (Optional, Manual):**
+If you use GitLab, you can seamlessly merge your GitLab activity into the exact same graph!
+1. In your web browser, navigate to `https://gitlab.com/users/YOUR_GITLAB_USERNAME/calendar.json`
+2. Save the page contents exactly as `gitlab-contributions.json` inside your `resources/` folder.
+
+### 4. Test Locally
 Because the site uses the `fetch()` API to load `data.json` dynamically, **you cannot simply double-click `index.html` to view it locally**. Modern browsers block local file fetching for security reasons (CORS).
 
 To view the site locally:
@@ -54,6 +69,8 @@ To host this for free at `yourusername.github.io`:
 ## 📁 File Structure
 
 - `index.html`: The structural template. It contains the layout and IDs for dynamic data binding, but no hardcoded text.
-- `resources/data.json`: The single source of truth for all content. Edit this file to update the site.
+- `resources/data.json`: The single source of truth for all content and theming.
+- `resources/contributions.json`: Automatically generated GitHub activity data.
+- `resources/gitlab-contributions.json`: Optional manual GitLab activity data.
 - `styles.css`: Contains the full visual design, responsive layout, and animations.
-- `script.js`: Handles fetching the data from `data.json`, injecting it into the DOM, and initializing interactive elements (like the welcome banner, scroll animations, and video modals).
+- `script.js`: Handles data fetching, graph rendering, dynamic DOM injection, and UI interactivity.
