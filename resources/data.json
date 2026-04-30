@@ -153,6 +153,156 @@
           { "type": "link", "text": "Source", "url": "#" },
           { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
         ]
+      },
+      {
+        "index": "07",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "08",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "09",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "10",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "11",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "12",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "13",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "14",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "15",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
+      },
+      {
+        "index": "16",
+        "title": "CI/CD Pipeline with Jenkins",
+        "description": "Configured Jenkins to create automated jobs for executing test suites and sending out corresponding email notifications.",
+        "tags": [
+          "Jenkins",
+          "Automation",
+          "CI/CD"
+        ],
+        "links": [
+          { "type": "link", "text": "Preview", "url": "#" },
+          { "type": "link", "text": "Source", "url": "#" },
+          { "type": "video", "text": "Video", "videoUrl": "https://www.youtube.com/watch?v=1QyxH8KGYrc" }
+        ]
       }
     ]
   },
@@ -179,30 +329,36 @@
         "description": "Executed system and integration testing for Fire OS and Vega OS. Driven by efficiency, I developed Python scripts that reduced manual testing effort by 15% and successfully logged and tracked 300+ defects in JIRA."
       },
       {
+        "year": "2013",
+        "title": "Aptech Certified Enterprise Application Developer (ACEAD) | Aptech Learning",
+        "date": "November 2011 — November 2013",
+        "description": "Mastered full-stack enterprise development by building scalable, multi-tiered cloud applications. The curriculum heavily focused on Java EE, .NET, HTML5, CSS3, JavaScript, SQL Server, and MongoDB."
+      },
+      {
         "year": "2012",
         "title": "BSc Physics | Mahatma Gandhi University",
         "date": "January 2009 — January 2012",
-        "description": "Executed system and integration testing for Fire OS and Vega OS. Driven by efficiency, I developed Python scripts that reduced manual testing effort by 15% and successfully logged and tracked 300+ defects in JIRA."
+        "description": "Developed a rigorous foundation in classical and modern physics alongside minors in electronics and mathematics, equipping me with strong analytical abilities and practical circuit-building skills."
       }
     ],
     "more": [
       {
-        "year": "2024",
+        "year": "2026",
         "title": "Testing and Operations Experience | Freelance / Personal Projects",
-        "date": "2023 - 2024",
+        "date": "2023 - 2026",
         "description": "Worked on smaller hands-on software projects, strengthened debugging habits, and built more confidence with workflows across development and QA."
       },
       {
-        "year": "2023",
-        "title": "Frontend Learning and Practice",
-        "date": "2022 - 2023",
-        "description": "Focused on improving HTML, CSS, JavaScript, and interface implementation through self-directed portfolio and practice work."
+        "year": "2020",
+        "title": "Introduction to Data Science Specialization | IBM (Coursera)",
+        "date": "February 2020 - December 2020",
+        "description": "Gained foundational data science skills by tackling real-world data problems and applying data analysis methodologies. The curriculum heavily focused on Python, SQL, Jupyter Notebooks, RStudio, and GitHub."
       },
       {
-        "year": "2022",
-        "title": "Foundation Building",
-        "date": "Early milestones",
-        "description": "Built the base for long-term technical growth by learning software fundamentals and exploring personal project development."
+        "year": "2016",
+        "title": "Post Graduate Diploma in Banking Management (PGDBM) | TimesPro",
+        "date": "March 2016 - September 2016",
+        "description": "Gained industry-ready banking expertise through a fast-track professional certification program. The curriculum heavily focused on retail banking operations, regulatory frameworks (KYC/AML), Finacle core banking software, and digital banking tools."
       }
     ]
   },

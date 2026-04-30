@@ -1,0 +1,54 @@
+name: Update GitHub Contributions
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run daily at midnight UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-contributions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Contributions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          USERNAME="${{ github.repository_owner }}"
+          
+          # GraphQL query to get the last year of contributions
+          QUERY=$(cat <<EOF
+          {
+            "query": "query { user(login: \"$USERNAME\") { contributionsCollection { contributionCalendar { weeks { contributionDays { date contributionCount } } } } } }"
+          }
+          EOF
+          )
+          
+          RESPONSE=$(curl -s -H "Authorization: bearer $GITHUB_TOKEN" -d "$QUERY" https://api.github.com/graphql)
+          
+          # Check for errors in the response
+          if echo "$RESPONSE" | grep -q '"errors"'; then
+            echo "Error fetching from GitHub API:"
+            echo "$RESPONSE"
+            exit 1
+          fi
+          
+          # Process the JSON response to match our expected format using jq
+          echo "$RESPONSE" | jq '
+            {
+              contributions: [
+                .data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | 
+                { date: .date, count: .contributionCount }
+              ]
+            }
+          ' > resources/contributions.json
+          
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add resources/contributions.json
+          # Only commit if there are changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update contributions graph" && git push)

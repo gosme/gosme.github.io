@@ -148,6 +148,66 @@ async function loadContent() {
   } catch (error) {
     console.error("Failed to load content:", error);
   }
+  
+  try {
+    const contribResponse = await fetch('resources/contributions.json');
+    const contribData = await contribResponse.json();
+    renderContributions(contribData);
+  } catch (error) {
+    console.error("Failed to load contributions:", error);
+    // Render empty graph if fetch fails
+    renderContributions({ contributions: [] });
+  }
+}
+
+function renderContributions(data) {
+  const graphContainer = document.getElementById('contribution-graph');
+  if (!graphContainer) return;
+  
+  // Clear existing
+  graphContainer.innerHTML = '';
+  
+  // Map data by date for quick lookup
+  const contribMap = new Map();
+  if (data && data.contributions) {
+    data.contributions.forEach(item => {
+      contribMap.set(item.date, item.count);
+    });
+  }
+
+  // Generate 365 days (52 weeks * 7 days + 1)
+  const today = new Date();
+  const days = 365;
+  const startDate = new Date(today);
+  startDate.setDate(today.getDate() - days);
+
+  for (let i = 0; i <= days; i++) {
+    const currentDate = new Date(startDate);
+    currentDate.setDate(startDate.getDate() + i);
+    
+    // Format date as YYYY-MM-DD
+    const dateString = currentDate.toISOString().split('T')[0];
+    const count = contribMap.get(dateString) || 0;
+    
+    const cell = document.createElement('div');
+    cell.className = 'contribution-cell';
+    
+    // Determine level (0 to 4)
+    let level = 0;
+    if (count > 0 && count <= 3) level = 1;
+    else if (count > 3 && count <= 6) level = 2;
+    else if (count > 6 && count <= 9) level = 3;
+    else if (count > 9) level = 4;
+    
+    cell.classList.add(`level-${level}`);
+    
+    // Add tooltip
+    const displayDate = currentDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+    const tooltipText = count === 0 ? `No contributions on ${displayDate}` : `${count} contribution${count > 1 ? 's' : ''} on ${displayDate}`;
+    cell.setAttribute('data-tooltip', tooltipText);
+    
+    graphContainer.appendChild(cell);
+  }
 }
 
 function renderContent(data) {
