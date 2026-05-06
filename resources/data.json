@@ -396,5 +396,11 @@
         "rel": "noreferrer"
       }
     ]
+  },
+  "visitorCount": {
+    "enabled": true,
+    "label": "Visitors",
+    "endpoint": "https://portfolio-visitor-count.gokulesh02.workers.dev/track",
+    "timeoutMs": 4000
   }
 }

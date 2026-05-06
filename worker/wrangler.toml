@@ -1,0 +1,6 @@
+name = "portfolio-visitor-count"
+main = "src/index.js"
+compatibility_date = "2026-05-06"
+
+[observability.logs]
+enabled = true

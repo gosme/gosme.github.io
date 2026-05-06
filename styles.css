@@ -661,8 +661,31 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   padding-top: 2.5rem;
   border-top: 1px solid var(--line);
+}
+
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 242, 0.65);
+}
+
+.visitor-counter-label {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.visitor-counter-value {
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* Contribution Graph */

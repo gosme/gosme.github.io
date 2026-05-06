@@ -74,3 +74,22 @@ To host this for free at `yourusername.github.io`:
 - `resources/gitlab-contributions.json`: Optional manual GitLab activity data.
 - `styles.css`: Contains the full visual design, responsive layout, and animations.
 - `script.js`: Handles data fetching, graph rendering, dynamic DOM injection, and UI interactivity.
+- `worker/`: Cloudflare Worker scaffold for optional visitor counting with private IP logging.
+
+## Optional Visitor Count
+
+This template includes an optional Cloudflare Worker scaffold for showing a public visitor count while storing raw IP logs only in a separate private repository.
+
+How it works:
+- the public site makes one API call to a Worker endpoint
+- the Worker returns count only
+- the Worker stores raw IP logs in a private GitHub repo using Cloudflare secrets
+- the public repo never contains the PAT or private repo name in browser-delivered code
+
+To enable it:
+1. Deploy the Worker in `worker/`.
+2. Configure the required Worker secrets described in [worker/README.md](worker/README.md).
+3. Update `resources/data.json`:
+   - set `visitorCount.enabled` to `true`
+   - set `visitorCount.endpoint` to your deployed Worker `/track` URL
+4. Add Cloudflare rate limiting and WAF protection to the Worker route.

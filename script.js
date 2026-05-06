@@ -11,6 +11,9 @@ const moreProjects = document.querySelector("#more-projects");
 const moreTimelineToggle = document.querySelector("#more-timeline-toggle");
 const moreTimeline = document.querySelector("#more-timeline");
 const toTopButton = document.querySelector("#to-top-button");
+const visitorCounter = document.querySelector("#visitor-counter");
+const visitorCounterLabel = document.querySelector("#visitor-counter-label");
+const visitorCounterValue = document.querySelector("#visitor-counter-value");
 let welcomeTimer;
 
 document.body.classList.remove("no-js");
@@ -144,6 +147,7 @@ async function loadContent() {
     const response = await fetch('resources/data.json');
     const data = await response.json();
     renderContent(data);
+    initVisitorCounter(data.visitorCount || {});
     initDynamicInteractions();
   } catch (error) {
     console.error("Failed to load content:", error);
@@ -169,6 +173,58 @@ async function loadContent() {
     // Render empty graph if fetch fails
     renderContributions({ contributions: [] });
   }
+}
+
+function initVisitorCounter(config) {
+  if (!visitorCounter || !visitorCounterLabel || !visitorCounterValue) {
+    return;
+  }
+
+  if (config.label) {
+    visitorCounterLabel.textContent = config.label;
+  }
+
+  if (!config.enabled || !config.endpoint) {
+    return;
+  }
+
+  const controller = new AbortController();
+  const timeoutMs = Number.isFinite(config.timeoutMs) ? config.timeoutMs : 4000;
+  const timeoutId = window.setTimeout(() => controller.abort(), timeoutMs);
+
+  fetch(config.endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      path: window.location.pathname,
+    }),
+    signal: controller.signal,
+  })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error(`Visitor count request failed with status ${response.status}`);
+      }
+
+      return response.json();
+    })
+    .then((payload) => {
+      const count = Number(payload?.count);
+
+      if (!Number.isFinite(count) || count < 0) {
+        throw new Error("Visitor count response did not include a valid count");
+      }
+
+      visitorCounterValue.textContent = String(count);
+      visitorCounter.hidden = false;
+    })
+    .catch((error) => {
+      console.warn("Visitor count unavailable:", error);
+    })
+    .finally(() => {
+      window.clearTimeout(timeoutId);
+    });
 }
 
 function renderContributions(data, gitlabData = {}) {
